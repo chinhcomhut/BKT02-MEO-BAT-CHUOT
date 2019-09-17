@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Rat(name, weight, speed) {
+        this.name = name;
+        this.weight = weight;
+        this.speed = speed;
+        this.getSpeed = function () {
+            return this.speed;
+        };
+        this.getWeight = function () {
+            return weight;
+        };
+        this.getNameMouse = function () {
+            document.write(this.name + ': Ta là chuột: Chit chit! Ta vẫn sống và ta đang chạy!<br>');
+            return name;
+        };
+    }
+    function Cat(name, weightcat, maxspeed) {
+        this.name = name;
+        this.weight = weightcat;
+        this.maxspeed = maxspeed;
+        this.getNameCat = function () {
+            document.write(this.name + ': Ta là mèo: Meo Meo! Ta sẽ ăn thịt ngươi! ' + '<br>');
+            return name;
+        };
+        this.getMaxspeed = function () {
+            return this.maxspeed;
+        };
+        this.getWeightCat = function () {
+            return weightcat;
+        };
+    }
+    let rat = new Rat("jerry", 20, 30);
+    speedMouse = rat.getSpeed();
+    weightMouse = rat.getWeight();
+    rat.getNameMouse();
+    let cat = new Cat('tom', 30, 50);
+    cat.getNameCat();
+    speedCat = cat.getMaxspeed();
+
+    function eating(speedMouse,speedCat,weightMouse) {
+
+        if (speedMouse < speedCat) {
+            document.write("Chuột chết!Mèo làm thịt chuột!" + "<br>");
+            document.write("Mèo tăng lên: " + weightMouse + 'kg');
+            return;
+        } else {
+            document.write("Chuột ta còn sống! Người chậm chạp quá!" + "<br>");
+        }
+    }
+    eating(speedMouse, speedCat, weightMouse);
+
+</script>
+</body>
+</html>
